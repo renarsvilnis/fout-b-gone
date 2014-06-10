@@ -15,7 +15,7 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
     "foutbgone.sublime-project",
     "foutbgone.sublime-workspace"
   ]
