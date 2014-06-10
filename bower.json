@@ -1,0 +1,22 @@
+{
+  "name": "foutbgone",
+  "main": "foutbgone.js",
+  "version": "0.1.0",
+  "authors": [
+    "Jay Vilhena <jvilhena@extensis.com>"
+  ],
+  "description": "FOUT-B-Gone addresses the flash of unstyled type (FOUT) problem in Firefox 3.5/3.6 and Internet Explorer 7–9.",
+  "keywords": [
+    "foutbgone"
+  ],
+  "homepage": "http://app.webink.com/fout-b-gone/",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+    "foutbgone.sublime-project",
+    "foutbgone.sublime-workspace"
+  ]
+}
