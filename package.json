@@ -1,0 +1,24 @@
+{
+  "name": "foutbgone",
+  "version": "1.0.0",
+  "description": "FOUT-B-Gone addresses the flash of unstyled type (FOUT) problem in Firefox 3.5/3.6 and Internet Explorer 7–9.",
+  "main": "foutbgone.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/renarsvilnis/Fout-B-Gone.git"
+  },
+  "keywords": [
+    "foutbgone",
+    "fout-b-gone",
+    "fout"
+  ],
+  "author": "Renārs Vilnis <renars.vilnis@gmail.com> (https://renarsvilnis.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/renarsvilnis/Fout-B-Gone/issues"
+  },
+  "homepage": "https://github.com/renarsvilnis/Fout-B-Gone#readme"
+}
