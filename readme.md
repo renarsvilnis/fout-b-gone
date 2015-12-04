@@ -9,8 +9,10 @@ FOUT-B-Gone addresses the flash of unstyled type (FOUT) problem in Firefox 3.5/3
 Installation
 --------------
 
-```sh
-bower install foutbgone
+```bash
+bower install --save foutbgone
+# or
+npm install --save foutbgone
 ```
 
 For using the library visit - http://app.webink.com/fout-b-gone/
