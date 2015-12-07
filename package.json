@@ -1,6 +1,6 @@
 {
   "name": "foutbgone",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "FOUT-B-Gone addresses the flash of unstyled type (FOUT) problem in Firefox 3.5/3.6 and Internet Explorer 7–9.",
   "main": "foutbgone.js",
   "scripts": {
