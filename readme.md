@@ -1,6 +1,9 @@
 Fout-B-Gone
 =========
 
+
+http://www.paulirish.com/2009/font-face-feature-detection/
+
 **My only contribution is making a git and bower repository**
 
 FOUT-B-Gone addresses the flash of unstyled type (FOUT) problem in Firefox 3.5/3.6 and Internet Explorer 7–9.
