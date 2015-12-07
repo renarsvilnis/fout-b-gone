@@ -36,6 +36,11 @@ var FoutBGone = function () {
     }
   };
 
+  var getFontNameFromCssRule = function (rule) {
+    var regex = /([\s\S]*)(font-family:\s*['"]?)([-_0-9a-zA-Z]+)([\s\S]*)/;
+    return rule.replace(regex, '$s3');
+  };
+
   // var getSelectors
 
   /**
@@ -81,10 +86,7 @@ var FoutBGone = function () {
         isCompliant = false;
 
         var fontFaceReplacer = function (matchedSubString, t) {
-          var replaceRegex = /([\s\S]*)(font-family:\s*['"]?)([-_0-9a-zA-Z]+)([\s\S]*)/;
-
-          // get a font name replace with third group
-          var fontname = matchedSubString.replace(replaceRegex, '$3');
+          var fontname = getFontNameFromCssRule(matchedSubString);
           fontnames.push(fontname);
           return matchedSubString;
         };
@@ -92,14 +94,14 @@ var FoutBGone = function () {
         stylesheet.cssText.replace(/@font-face\s*\{([^\}]+)\}/ig, fontFaceReplacer);
       }
 
+      // cssRules - FF, rules - IE
       var fontFaceRules = stylesheet.cssRules || stylesheet.rules;
 
       for (var j = 0, ll = fontFaceRules.length; j < ll; j++) {
         var rule = fontFaceRules[j];
 
         if (isCompliant && rule instanceof CSSFontFaceRule) {
-          var replaceRegex = /([\s\S]*)(font-family:\s*['"]?)([-_0-9a-zA-Z]+)([\s\S]*)/;
-          var fontname = rule.cssText.replace(replaceRegex, '$3');
+          var fontname = getFontNameFromCssRule(rule.cssText);
           fontnames.push(fontname);
         } else {
           // CSSStyleRule
@@ -146,8 +148,8 @@ var FoutBGone = function () {
     // combine all selectors and add visibility hidden to them
     var allhidden = '';
     for (var i = 0, l = selectors.length; i < l; i++) {
-			var seperator = i < (l - 1) ? ', ' : ' ';
-			allhidden += selectors[i] + seperator;
+      var seperator = i < (l - 1) ? ', ' : ' ';
+      allhidden += selectors[i] + seperator;
     }
     allhidden += '{visibility:hidden}';
 
